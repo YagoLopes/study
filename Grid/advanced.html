@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Basico</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #7159c1;
+        }
+
+        .container {
+            display: grid;
+            /*inicia o grid*/
+            grid-template-columns: 3fr 1fr;
+            /*dividindo a tela em grid 2 fração 1 de 3 e outra de 1*/
+            grid-template-rows: 20vh 70vh 10vh;
+            /*VH altura que eu estou vendo em tela*/
+            grid-template-areas:
+                "header header"
+                /*na linha 1 vou colocar o header nas 2 colunas*/
+                "main aside"
+                /*na linha 2 main e aside*/
+                "footer footer";
+            /*na linha 3 o footer nas duas colunas*/
+            /*para trocar a posição basta trocar os nome no gri-area*/
+            /*para deixar espaços vasios basta colocar o ponto exe: "footer ."*/
+        }
+
+        header {
+            background-color: yellow;
+            grid-area: header;
+        }
+
+        main {
+            background-color: blue;
+            grid-area: main;
+        }
+
+        aside {
+            background-color: green;
+            grid-area: aside;
+        }
+
+        footer {
+            background-color: red;
+            height: 100px;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div className="container">
+        <header>
+        </header>
+        <main></main>
+        <aside></aside>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
