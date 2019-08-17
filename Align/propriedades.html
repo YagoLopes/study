@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alinhamento</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            background-color: black;
+            width: 100vw;
+            /*todo o espaço que eu estou vendo no width*/
+            height: 100vh;
+            /*todo o espaço que eu estou vendo no height*/
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /*3 colunas iguais ocupando toda a tela*/
+            grid-template-rows: 1fr 1fr 1fr;
+            /*3 linhas iguais ocupando toda a tela*/
+
+            /*para a propriedade justify-content e align-content funcionar é preciso ter espaços sobrando na div pai para o elemnto filho receber o alinhamento desejado*/
+            /*  grid-template-columns: 10px 10px 10px; /*3 colunas iguais*/
+            /*  grid-template-rows: 10px 10px 10px; /*3 linhas iguais */
+
+            grid-gap: 5px;
+            /*espaço entre os componentes*/
+
+            /*justify-content Alinha os elementos na horizontal*/
+            /* justify-content: center; /*justifique o conteudo no centro*/
+            /* justify-content: space-between; /*justifique o conteudo com um espaço igual entre os elementos*/
+            /* justify-content: space-around; /*justifique igual o between porem com espaços envolta*/
+            /* justify-content: space-evenly; /*coloque todos os espaços do mesmo tamanho*/
+
+            /*align-content Alinha os elementos na vertical*/
+            /* align-content: end; /*alinha os elemntos no final*/
+            /* align-content: center; /*alinha os elemntos no centro*/
+            /* align-content: space-between; /*justifique o conteudo com um espaço igual entre os elementos*/
+            /* align-content: space-around; /*justifique igual o between porem com espaços envolta*/
+            /* align-content: space-evenly; /*coloque todos os espaços do mesmo tamanho*/
+        }
+
+        .container>div {
+            /*apenas as divs que estão na primeira camada*/
+            background: #7159c1;
+        }
+    </style>
+</head>
+
+<body>
+    <div className="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>
