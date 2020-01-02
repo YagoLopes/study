@@ -1,7 +1,8 @@
-# Array: High Order Functions
+# Study:
 
 ---
 
-1.O que é?
+Estudos/POC linguagens conceitos e tecnologias :
 
-- `Funções que recebem ou retorna outras funções`
+1. `CSS`
+2. `JavaScript`
