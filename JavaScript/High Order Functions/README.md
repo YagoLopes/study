@@ -5,16 +5,15 @@
 1.O que é?
 
 - `Funções que recebem ou retorna outras funções`
-- `Elas passam por cada elemento do array aplicando afunção imposta`
-
-  2.Funções
+- `Elas passam por cada elemento do array aplicando outra função chamada de callback`
 
 ---
 
-## Imutabilidade: Não altera o array original
+2.Funções
 
-- `Filter`: Cria um novo array e retorna `true` ou `false` de acordo com a condição imposta.
-
-## Não respeita a imutabilidade: Altera o array original
-
-- `ForEatch`:
+- `Filter`
+- `find`
+- `ForEatch`
+- `map`
+- `reduce`
+- `sort`
