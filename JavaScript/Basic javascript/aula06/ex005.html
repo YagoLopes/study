@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos com a DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudosDOM</h1>
+    <p>Aqui vai o resultado</p>
+    <div id="msg">Clique em mim</div>
+    <div name="msg">Clique em mim</div>
+    <div class="msg">Clique em mim</div>
+
+
+
+
+
+    <script>
+        /*DOM*/
+        /*Elementos Parent São elementos Pais na arvor dom do html 
+        Exemplo:
+        window ==> document
+        document ==> body
+        body ==> div
+        window: é o elemento Parent(pai) do elemento documnet 
+        div: é o elemento child(filho) do elemnto body
+        */
+        window.document.write(window.document.charset) //ESCREVE NA TELA O CHARSET DO DOCUMENTO
+
+        /*SELETORES*/
+
+        let p1 = window.document.getElementsByTagName('p')[0]//essa function pega todos os elementos <p> presente no documento, para pegar apenas um especifique no array o numero dele na arvore DOM
+        window.document.write(p1.innerText)//ESSA FUNCTION REPLICA O "TEXT" DO ELEMENTO QUE ESTÁ DENTRO DA VARIAVEL **let p1**
+        window.document.write(p1.innerHTML)//ESSA FUNÇÃO REPLICA A TAG DO ELEMENTO QUE ESTA SENTRO DA VARIAVEL **let p1**
+
+        let d = window.document.getElementById("msg")//SELECIONANDO ELEMENTO POR ID
+        d.style.background = "green"; // MANIPULANDO O CSS DA TAG
+
+        let n = window.document.getElementsByName("msg")[0]; //SELECIONA O ELEMENTO POR NOME
+        n.innerText = "Olá";
+
+        let c = window.document.getElementsByClassName("msg")[0]; //SELECIONA O ELEMENTO POR CLASSE
+        c.innerText = "teste";
+
+        let q = window.document.querySelector("div#msg"); //selecionando por query utilizando a sitax do CSS
+        q.style.color = "blue";
+
+
+
+    </script>
+</body>
+
+</html>

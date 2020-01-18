@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            /*alinha texto na mesma altura*/
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="area" onmo onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" >
+        Interaja...
+    </div>
+    <script>
+        //EVENTOS DOM: é tudo aquilo que pode acontecer com os elementos da DOM
+        //eventos de mouse
+
+        /*mouseenter: quando o mouse estiver por cima do elemento*/
+        /*mousemove: toda vez que o mouve mover*/
+        /*mousedown: quando segurar o clique do mouve*/
+        /*mouseup: quando soltar o clique do mouse*/
+        /*click: quando o click do mouse for desparado*/
+        /*mouseout: quando o mouse sair de cima do elemento*/
+
+        //outros eventos: https://developer.mozilla.org/pt-BR/docs/Web/Events
+
+        //FUNCTIONS
+        let area = window.document.getElementById("area");
+        area.addEventListener("onmouseup", up)//Os EventeListener serve para adicionar eventos diretamente no javascript sem sujar o html
+        
+        function up() {
+          area.innerText = "Soltou!";
+          area.style.backgroundColor = "white";
+      }
+
+
+        function clicar() {
+          
+            area.innerText = "Clicou!";
+            area.style.backgroundColor = "red";
+        }
+        function entrar() {
+            
+            area.innerText = "Entrou!";
+            area.style.backgroundColor = "blue";
+        }
+        function sair() {
+      
+            area.innerText = "Saiu!";
+            area.style.backgroundColor = "green";
+        }
+    </script>
+
+</body>
+
+</html>
