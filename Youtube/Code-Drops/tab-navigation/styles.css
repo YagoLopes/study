@@ -20,14 +20,12 @@ input {
 
 body {
   height: 100vh;
-
   background-color: var(--black);
   color: var(--white);
 }
 
 header {
   margin-top: 32px;
-
   text-align: center;
   height: 100px;
   color: var(--primary);

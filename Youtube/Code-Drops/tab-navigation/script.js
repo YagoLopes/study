@@ -15,14 +15,12 @@ const html = {
   openTab: document.querySelector("[data-open]"),
 };
 
-//Todas as funções que estão dentro de tabNavigation, obviamente é do contexto tabNavigation
-
-function tabNavigation() {
+function TabNavigation() {
   function hideAllTabContent() {
+    //Já fiz o espalhamento direto no objeto html
     // const contents = [...html.contents.children]; //Espalha os elementos em um array
-
     html.contents.forEach((section) => {
-      section.styles.display = "none";
+      section.style.display = "none";
     });
   }
 
@@ -34,7 +32,7 @@ function tabNavigation() {
 
   function showCurrentTab(id) {
     const tabContent = document.querySelector("#" + id);
-    tabContent.styles.display = "block";
+    tabContent.style.display = "block";
   }
 
   function selectTab(event) {
@@ -63,6 +61,6 @@ function tabNavigation() {
 }
 
 window.addEventListener("load", () => {
-  const tabNavigation = tabNavigation();
+  const tabNavigation = TabNavigation();
   tabNavigation.init();
 });
